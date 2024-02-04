@@ -1,5 +1,5 @@
 cc_library_headers {
-    name: "qti_powerhal_headers",
+    name: "qti_powerhal_headers.samsung",
     vendor_available: true,
     export_include_dirs: ["."],
 }

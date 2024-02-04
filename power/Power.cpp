@@ -44,6 +44,7 @@
 #include <android-base/logging.h>
 #include <android/binder_manager.h>
 #include <android/binder_process.h>
+#include "utils.h"
 
 using ::aidl::android::hardware::power::BnPower;
 using ::aidl::android::hardware::power::Boost;
@@ -64,6 +65,9 @@ extern bool isDeviceSpecificModeSupported(Mode type, bool* _aidl_return);
 extern bool setDeviceSpecificMode(Mode type, bool enabled);
 #endif
 
+#define TSPPATH "/sys/class/sec/tsp/cmd"
+#define TOUCHPATH "/sys/class/sec/tsp/input/enabled"
+
 void setInteractive(bool interactive) {
     set_interactive(interactive ? 1 : 0);
 }
@@ -78,6 +82,7 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
     switch (type) {
 #ifdef TAP_TO_WAKE_NODE
         case Mode::DOUBLE_TAP_TO_WAKE:
+        OG(INFO) << "Mode " << static_cast<int32_t>(type) << "Not Supported";
             ::android::base::WriteStringToFile(enabled ? "1" : "0", TAP_TO_WAKE_NODE, true);
             break;
 #else
@@ -101,6 +106,7 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
             power_hint(POWER_HINT_LAUNCH, enabled ? &enabled : NULL);
             break;
         case Mode::INTERACTIVE:
+            ::android::base::WriteStringToFile(enabled ? "1" : "0", TOUCHPATH, true);
             setInteractive(enabled);
             break;
         case Mode::SUSTAINED_PERFORMANCE:

@@ -40,7 +40,7 @@
 #include "power-common.h"
 #include "utils.h"
 
-#define LOG_TAG "QTI PowerHAL"
+#define LOG_TAG "QTI Samsung PowerHAL"
 #include <log/log.h>
 
 #define USINSEC 1000000L
@@ -65,7 +65,7 @@ static int (*perf_lock_rel)(int handle);
 static int (*perf_hint)(int, const char*, int, int);
 static PropVal (*perf_get_prop)(const char* prop, const char* def_val);
 static struct list_node active_hint_list_head;
-const char* pkg = "QTI PowerHAL";
+const char* pkg = "QTI Samsung PowerHAL";
 
 static void* get_qcopt_handle() {
     void* handle = NULL;
