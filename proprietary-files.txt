@@ -942,6 +942,7 @@ vendor/lib64/vendor.samsung.hardware.keymint-V2-ndk.so
 vendor/lib64/vendor.samsung.hardware.security.fkeymaster-V1-ndk.so
 vendor/lib64/libkeymaster4_1support.so
 vendor/lib64/libkeymaster4support.so
+vendor/lib64/libhermes_cred.so
 
 # Machine Learning
 vendor/lib64/libreffeature.so
@@ -959,6 +960,7 @@ vendor/lib64/libshctrl.so
 vendor/bin/hw/vendor.samsung.hardware.security.drk@2.0-service
 vendor/etc/init/vendor.samsung.hardware.security.drk@2.0-service.rc
 vendor/lib64/vendor.samsung.hardware.security.drk@2.0.so
+vendor/lib64/libdk_vnd_service_core.so
 
 # Media
 system_ext/lib/libmmosal.so
