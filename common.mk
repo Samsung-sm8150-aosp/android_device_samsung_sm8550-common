@@ -56,7 +56,7 @@ PRODUCT_COPY_FILES += \
 
 
 PRODUCT_COPY_FILES += \
-    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration_7_0.xml \
+    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -199,12 +199,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
 
-# IPACM
-#PRODUCT_PACKAGES += \
-    ipacm \
-    IPACM_cfg.xml \
-    IPACM_Filter_cfg.xml
-
 USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
 
 # Init
@@ -340,7 +334,7 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
     vendor.qti.hardware.perf@2.3.vendor \
     android.hardware.power-V2-ndk_platform.vendor \
-    vendor.lineage.powershare@1.0-service.samsung.sm8550
+    vendor.lineage.powershare@1.0-service.samsung
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/power/config/kalama/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
