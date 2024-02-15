@@ -73,15 +73,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "vendor.qti.media.c2audio@1.0-service.rc",
-    src: "vendor.qti.media.c2audio@1.0-service.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
-
-
-prebuilt_etc {
     name: "init.samsung.rc",
     src: "init.samsung.rc",
     sub_dir: "init/hw",
