@@ -793,7 +793,6 @@ vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/vendor.samsung.hardware.biometrics.fingerprint-V1-ndk.so
 
 # Gatekeeper
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so
 vendor/lib64/hw/gatekeeper.mdfpp.so
 
 # Graphics (Adreno)
@@ -942,7 +941,6 @@ vendor/lib64/vendor.samsung.hardware.keymint-V2-ndk.so
 vendor/lib64/vendor.samsung.hardware.security.fkeymaster-V1-ndk.so
 vendor/lib64/libkeymaster4_1support.so
 vendor/lib64/libkeymaster4support.so
-vendor/lib64/libhermes_cred.so
 
 # Machine Learning
 vendor/lib64/libreffeature.so
@@ -950,6 +948,18 @@ vendor/lib64/libsecfr_engine.so
 vendor/lib64/libsecfr_model.so
 vendor/lib64/libshotsuggestion.so
 vendor/lib64/libshotsuggestion_engines.so
+
+# hermes
+vendor/bin/hermesd
+vendor/etc/init/hermesd.rc
+vendor/etc/secnvm/k250a_00000306.img
+vendor/lib64/android.hardware.weaver@1.0.so
+vendor/lib64/libdk_vnd_service_core.so
+vendor/lib64/libese-grdg.so
+vendor/lib64/libhermes.so
+vendor/lib64/libhermes_bdbridge.so
+vendor/lib64/libhermes_cred.so
+vendor/lib64/vendor.samsung.hardware.security.hermes-V1-ndk.so
 
 # Hwault
 vendor/lib64/libdsms_vendor.so
@@ -1339,10 +1349,6 @@ vendor/etc/sensors/config/sns_tilt_sw_enabled.json
 vendor/etc/sensors/config/sns_transport_ppe.json
 vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
-
-# sec_nvm
-vendor/bin/sec_nvm
-vendor/etc/init/init.spdaemon.rc
 
 # spdaemon
 vendor/bin/sec_nvm
