@@ -141,6 +141,7 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
+BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := kalama
 
 # Properties
