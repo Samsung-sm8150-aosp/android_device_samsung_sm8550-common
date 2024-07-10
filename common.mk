@@ -153,27 +153,27 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
 # eUICC
-PRODUCT_PACKAGES += OpenEUICC
+ PRODUCT_PACKAGES += OpenEUICC
 
 # Fastboot
 PRODUCT_PACKAGES += \
     fastbootd
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.common-V2-ndk.vendor \
-    android.hardware.biometrics.fingerprint-V2-ndk.vendor
+# # Fingerprint
+#  PRODUCT_PACKAGES += \
+#      android.hardware.biometrics.common-V2-ndk.vendor \
+#      android.hardware.biometrics.fingerprint-V2-ndk.vendor
 
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service.samsung
+#  PRODUCT_PACKAGES += \
+#      android.hardware.biometrics.fingerprint-service.samsung
 
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
+#  PRODUCT_COPY_FILES += \
+#      frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
-# Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service
+# # Gatekeeper
+ PRODUCT_PACKAGES += \
+     android.hardware.gatekeeper@1.0-impl \
+     android.hardware.gatekeeper@1.0-service
 
 # Graphics
 PRODUCT_COPY_FILES += \
@@ -296,7 +296,6 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor \
     com.android.nfc_extras \
     libchrome.vendor \
-    nqnfcinfo \
     Tag
 
 PRODUCT_COPY_FILES += \
@@ -452,9 +451,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.mbms.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.mbms.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml
 
-PRODUCT_PACKAGES += \
-    PhhIms \
-    PhhImsOverlay
+#  PRODUCT_PACKAGES += \
+#      PhhIms \
+#      PhhImsOverlay
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-phhims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-phhims.xml
