@@ -72,7 +72,37 @@ on boot
     write /sys/class/sec/ap_pmic/volkey_wakeup 1
     chown radio system /sys/class/sec/ap_pmic/gpio_dump
     chmod 664 /sys/class/sec/ap_pmic/gpio_dump
-
+        # Permissions for Touchscreen
+    chown system radio /sys/class/sec/tsp/cmd
+    chown system system /sys/class/sec/tsp/input/enabled
+    chmod 0660 /sys/class/sec/tsp/input/enabled
+    chown system system /sys/class/sec/tsp/enabled
+    chmod 0660 /sys/class/sec/tsp/enabled
+    chown root system /proc/tsp_msg
+    chmod 0440 /proc/tsp_msg
+    chown system radio /sys/class/sec/tsp/pressure_enable
+    chown system system /sys/class/sec/tsp/multi_count
+    chown system system /sys/class/sec/tsp/wet_mode
+    chown system system /sys/class/sec/tsp/noise_mode
+    chown system system /sys/class/sec/tsp/comm_err_count
+    chown system system /sys/class/sec/tsp/checksum
+    chown system system /sys/class/sec/tsp/holding_time
+    chown system system /sys/class/sec/tsp/all_touch_count
+    chown system system /sys/class/sec/tsp/z_value
+    chown system system /sys/class/sec/tsp/sensitivity_mode
+    chown system system /sys/class/sec/tsp/prox_power_off
+    chown system system /sys/class/sec/tsp/irq_recovery_count
+    chown system system /sys/class/sec/tsp/ic_reset_count
+    chown system system /sys/class/sec/tsp/mode_change_failed_count
+    chown system system /sys/class/sec/sec_key/key_pressed_count
+    chown system system /dev/tspio
+    chown system system /sys/class/sec/tsp/ear_detect_enable
+    chown system system /sys/class/sec/tsp/ta_mode
+    chown system system /sys/class/sec/tsp/virtual_prox
+    chown system system /sys/class/sec/tsp/hw_param
+    chown system system /sys/class/sec/tsp/input/trusted_touch_enable
+    chown system system /sys/class/sec/tsp/input/trusted_touch_event
+    chown system system /sys/class/sec/tsp/input/trusted_touch_type
 # Permissions for IAFT
     chown radio system /sys/power/iaft/enable_code
     chown radio system /sys/power/iaft/enable_tid
@@ -98,6 +128,7 @@ on boot
 on property:sys.boot_completed=1
     write /sys/class/secgpio_check/secgpio_check_all/gpioinit_call 1
     chmod 220 /dev/power_on_alarm
+    write /sys/devices/virtual/sec/tsp/cmd "aot_enable,1"
 
 on shutdown
 
