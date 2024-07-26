@@ -305,6 +305,12 @@ vendor/lib64/libEventFinder.camera.samsung.so
 vendor/lib64/libFace3DTA.so
 vendor/lib64/libFace3D_hlos.so
 vendor/lib64/libFaceService.so
+vendor/lib64/libzoomroi.samsung.so
+vendor/lib64/libsecfr_model.so
+vendor/lib64/libqdutils.so
+vendor/lib64/libsecfr_engine.so
+vendor/lib64/vendor.samsung.hardware.biometrics.face-V3-ndk.so
+vendor/lib64/android.hardware.biometrics.face-V2-ndk.so
 vendor/lib64/libFace_Landmark_API.camera.samsung.so
 vendor/lib64/libFastUWDistortionCorrection.camera.samsung.so
 vendor/lib64/libHDRVerifier_v1.camera.samsung.so
@@ -497,7 +503,6 @@ vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/bin/hw/vendor.samsung.hardware.security.drk@2.0-service
 vendor/etc/init/vendor.samsung.hardware.security.drk@2.0-service.rc
 vendor/lib64/libdk_vnd_service_core.so
-vendor/lib64/vendor.samsung.hardware.security.drk-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.security.drk@2.0.so
 
 # DSP
@@ -845,7 +850,6 @@ vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_kalama.xml
 vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy
-vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
 vendor/etc/vintf/manifest/sec_c2_manifest_default0_1_0.xml
 vendor/lib64/libQcelp13SwCodec.so
 vendor/lib64/libc2filterplugin.so
