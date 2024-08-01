@@ -125,6 +125,10 @@ on boot
     chmod 664 /sys/devices/system/cpu/cpufreq/policy0/walt/adaptive_high_freq
     chmod 664 /sys/devices/system/cpu/cpufreq/policy0/walt/adaptive_low_freq
 
+    # Reverse wireless charging
+    chown system radio /sys/class/power_supply/battery/wc_tx_en
+    chmod 0664 /sys/class/power_supply/battery/wc_tx_en
+
 on property:sys.boot_completed=1
     write /sys/class/secgpio_check/secgpio_check_all/gpioinit_call 1
     chmod 220 /dev/power_on_alarm
