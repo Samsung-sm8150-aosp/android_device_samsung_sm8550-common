@@ -7,6 +7,7 @@
 LOCAL_PATH := $(call my-dir)
 
 ifneq ($(filter dm1q dm2q dm3q q5q gts9wifi,$(TARGET_DEVICE)),)
+include $(call all-subdir-makefiles)
 
 # A/B builds require us to create the mount points at compile time.
 # Just creating it for all cases since it does not hurt.

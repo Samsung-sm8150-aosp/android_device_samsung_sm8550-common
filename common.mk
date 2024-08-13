@@ -361,10 +361,14 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-V2-ndk_platform.vendor \
+    android.hardware.power-service-qti.samsung \
     android.hardware.power@1.2.vendor \
     vendor.qti.hardware.perf@2.3.vendor \
+    android.hardware.power-V2-ndk_platform.vendor \
     vendor.lineage.powershare@1.0-service.samsung
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/power/config/kalama/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
 # Protobuf
 PRODUCT_PACKAGES += \
