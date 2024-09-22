@@ -556,7 +556,6 @@ vendor/lib64/libhdrdynamic.so
 vendor/lib64/libhdrdynamicootf.so
 
 # Display (HWC)
-vendor/bin/hw/vendor.qti.hardware.display.composer-service
 vendor/bin/qdcmss
 vendor/etc/init/qdcmss.rc
 vendor/etc/snapdragon_color_libs_config.xml
@@ -566,9 +565,6 @@ vendor/lib64/libmemutils.so
 vendor/lib64/libqdcm-algo.so
 vendor/lib64/libqdcm-json-mode-parser.so
 vendor/lib64/libqdcm-mode-parser.so
-vendor/lib64/libsdmcore.so|8e3417d8d9ef045fe8d302c381fc8975e90b02f5
-vendor/lib64/libsdmdal.so|df0ec54bcb4f5c4028dda2317068a8bfbb36b523
-vendor/lib64/libsdmutils.so
 vendor/lib64/libsnapdragoncolor-manager.so
 vendor/lib64/libsnapdragoncolor-qdcm.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
@@ -598,25 +594,25 @@ vendor/etc/display/DPU9__.xml
 vendor/etc/display/advanced_sf_offsets.xml
 vendor/etc/display/thermallevel_to_fps.xml
 vendor/lib64/libbacklight-calib.so
-vendor/lib64/libclstc_algorithm_adapter.so
-vendor/lib64/libclstc_gcp_adapter.so
-vendor/lib64/libclstc_tm.so
 vendor/lib64/libdigital-dimming.so
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libhdradaptivecustom.so
 vendor/lib64/libintervmipc.so
 vendor/lib64/libmm-hdcpmgr.so
 vendor/lib64/libqrtrclient.so
-vendor/lib64/libqseed3.so
-vendor/lib64/librcmask.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-colormgr-algo.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libtestutils.so
-vendor/lib64/libtinyxml2_1.so
-vendor/lib64/libvmfilexfer.so
+vendor/lib64/libclstc_algorithm_adapter.so|63afcafe7f1391f48da69af983c7aa1ae71dfcc4
+vendor/lib64/libclstc_gcp_adapter.so|9faf97e8b7f3012b0101875c42a6e65423a5b39b
+vendor/lib64/libclstc_tm.so|537e939ba3c460060c40f4e0082c8c1189a42b5c
+vendor/lib64/libdisplayqos.so|7910d9e6a495ebc7502771d495b88e93dd2f07a5
+vendor/lib64/libdisplayskuutils.so|0a05c4cdde30804f37f5eeaad4a5b0ba253efdc7
+vendor/lib64/libqseed3.so|d47aa0fd4105184ec9cc5654c496ad4a0cda50ab
+vendor/lib64/librcmask.so|b5c7dd55f9a517f61dba444662996ee551224257
+vendor/lib64/libsdm-color.so|161c067bc1f817276c91a53e6ba4854329ba7a04
+vendor/lib64/libsdm-colormgr-algo.so|3c5863c770423691f7a39a06f508c59e59520aa0
+vendor/lib64/libsdm-disp-vndapis.so|6ac66edfad6c49c0514a3b12776383a0266e9cc6
+vendor/lib64/libsdmextension.so|c18c0766a7ebd274cff9f1ed22488ecf9fd11b72
+vendor/lib64/libtestutils.so|c08a0c89b3102badf6eb58cb38df608d70a43877
+vendor/lib64/libtinyxml2_1.so|2b1b8300b0fd7a6059d13dae00f60735445725f9
+vendor/lib64/libvmfilexfer.so|8520a88db5dedc1a7226be4b3aeb7e6bef6d4dce
 
 # Dolby
 vendor/etc/dax3_media_codecs_dolby_audio.xml
@@ -825,6 +821,8 @@ vendor/bin/hw/android.hardware.security.keymint-service
 vendor/etc/init/android.hardware.security.keymint-service.rc
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml:vendor/etc/vintf/manifest/android.hardware.security.keymint-service.xml
 vendor/lib64/libskeymint10device.so
+vendor/lib64/libcppbor_external.so
+vendor/lib64/vendor.samsung.hardware.radio.network-V1-ndk.so
 vendor/lib64/libskeymint_cli.so
 vendor/lib64/vendor.samsung.hardware.keymint-V2-ndk.so
 
