@@ -64,10 +64,13 @@ function blob_fixup() {
             grep -q "android.hardware.security.rkp-V3-ndk.so" "${2}" || ${PATCHELF} --add-needed "android.hardware.security.rkp-V3-ndk.so" "${2}"
             ${PATCHELF} --replace-needed libcrypto.so libcrypto-v33.so "${2}"
             ;;
+        vendor/lib64/libqcodec2_core.so)
+            ${PATCHELF} --replace-needed libcodec2_vndk.so libcodec2_vndk-v34.so "${2}"
+            ;;
         vendor/lib64/hw/gatekeeper.mdfpp.so)
             ${PATCHELF} --replace-needed libcrypto.so libcrypto-v33.so "${2}"
             ;;
-        vendor/lib*/libsensorlistener.so)
+        vendor/lib64/libsensorlistener.so)
             ${PATCHELF} --add-needed "libshim_sensorndkbridge.so" "${2}"
             ;;
         vendor/lib64/unihal_android.so)

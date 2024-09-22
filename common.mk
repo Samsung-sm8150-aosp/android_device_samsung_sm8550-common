@@ -519,7 +519,11 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     libcrypto-v33
-    
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/vndk/libcodec2_vndk-v34.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_vndk-v34.so
+
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-V2-ndk.vendor
